@@ -5,9 +5,9 @@ from os.path import abspath, exists
 from shutil import copy, rmtree
 
 def all(all):
-    os.system('node-waf clean')
-    os.system('node-waf configure')
-    os.system('node-waf')
+    os.system('node-gyp clean')
+    os.system('node-gyp configure')
+    os.system('node-gyp')
 
 def clean(cln):
   if exists('build'): rmtree('build')
